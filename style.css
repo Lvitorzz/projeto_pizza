@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Montserrat:wght@100;400;500;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', 'Arial';
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #730202;
+    color: #F29F05;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgb(73, 73, 73);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.menu-toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #F29F05;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 50px;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+.menus {
+    position: relative;
+}
+
+.menus::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #F29F05;
+    transition: width 0.3s ease;
+}
+
+.menus:hover::before,
+.menus:focus::before {
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F29F05;
+    font-weight: bold;
+}
+
+.menu-active nav {
+    display: block;
+}
+
+.menu-active .menu-toggle {
+    color: #f90;
+}
+
+.logo {
+    max-width: 100px;
+    margin-left: 20px;
+}
+
+.nome-estabelecimento {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.image-layout {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-left {
+    flex: 1;
+    max-width: 600px;
+    transition: transform 0.3s;
+}
+
+.image-right {
+    flex: 1;
+    max-width: 360px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.image:hover{
+    transform: translateY(-2px);
+}
+
+
+.texto-cardapio{
+    text-align: center;
+    margin: 100px;
+    margin-top: 50px;
+    color: #730202;
+    font-size: 4em;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+.card {
+    width: 300px;
+    height: 360px;
+    margin-right: 30px;
+    margin-left: 10px;
+    text-align: center; 
+    background-color: #D95204;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+
+.card img {
+    width: 290px;
+    height: 150px;
+    border-radius: 20px;
+    margin-top: 5px;
+    transition: transform 0.3s;
+  }
+
+.card h3{
+    transition: transform 0.3s;
+}
+  
+.card:hover {
+    transform: scale(1.1);
+  }
+
+.card:hover img {
+    transform: translateY(-50px)
+  }
+
+.card:hover h3{
+    transform: translateY(-50px);
+}
+
+.card:hover h4{
+    transform: translateY(-50px);
+}
+
+.card:hover .botao-ingredientes, .botao-pedido{
+    transform: translateY(-50px);
+}
+  
+.card .botao-pedido {
+    width: 200px;
+    height: 40px;
+    display: none;
+    background-color: rgb(38, 255, 0);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 50px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .botao-pedido {
+    display: block;
+}
+
+.card .botao-pedido:hover{
+    background-color: rgb(38, 255, 0);
+    color: white;
+    border: 1px solid white;
+    box-shadow: 4px 4px 10px black;
+    transform: translateY(-53px);
+}
+
+.card .botao-ingredientes{
+    width: 200px;
+    height: 40px;
+    display: none;
+    background-color: rgba(0, 123, 255, 0.0);
+    color: #730202;
+    font-size: 1em;
+    font-weight: bold;
+    border: 3px solid #730202;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-left: 50px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .botao-ingredientes {
+    display: block;
+}
+
+.card .botao-ingredientes:hover{
+    background-color: #730202;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 4px 4px 10px black;
+    transform: translateY(-53px);
+}
+
+.card h4 {
+    font-size: 0.8em;
+    color: white;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: start;
+    transition: transform 0.3s;
+  }
+  
+.card h4, .card span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-adicional {
+    display: none;
+    transform: rotateY(180deg);
+}
+
+.card.virado {
+    transform: rotateY(180deg);
+}
+
+.texto-faca-pedido{
+    text-align: center;
+    margin: 50px;
+    color: #730202;
+    font-size: 4em;
+}
+
+
+
+.ingredientes {
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.ingredientes ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ingredientes ul li {
+    margin: 5px;
+}
+
+.botao-ingredientes:focus + .ingredientes {
+    display: block;
+}
+
+.banner-fazer-pedido{
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.quem-somos-texto{
+    text-align: center;
+    margin: 50px;
+    color: #730202;
+    font-size: 4em;
+}
+
+.quem-somos {
+    display: flex;
+}
+
+.img-somos {
+    width: 600px;
+    height: 600px;
+    margin-right: 20px;
+    margin-left: 50px;
+    border-radius: 25px;
+}
+
+.textos {
+    flex: 1;
+}
+
+.textos h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.textos p {
+    font-size: 1.2em; 
+    margin-top: 10px; 
+}
+
+.textos h2{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.mapa{
+    position: relative;
+    margin-left: 40px;
+    border-radius: 20px;
+}
+
+iframe{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+footer{
+    height: 300px;
+    margin-top: 50px;
+    background-color: #730202;
+}
+
+.footer-logo-nome{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo-nome img{
+    margin-top: 10px;
+    height: 80px;
+}
+
+.nome-footer{
+    margin-top: 30px;
+    margin-right: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #F29F05;
+}
+
+.redes-texto{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.redes-texto h1{
+    font-size: 1.2em;
+    color: white;
+}
+
+.icons-redes{
+    display: flex;
+    justify-content: center;
+}
+
+.icons-redes i{
+    font-size: 3em;
+    margin: 30px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.icons-redes i:hover{
+    transform: translateY(-8px);
+}
+
+.divisao-footer{
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    margin: auto;
+}
+
+.desenvolvido-por{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.desenvolvido-por h5{
+    color: white;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+    background-color: green;
+    border-radius: 50px;
+  }
+
+  .btn-whatsapp img {
+    max-width: 80px;
+    transition: transform 0.4s;
+    color: white;
+  }
+
+  .btn-whatsapp img:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn-whatsapp .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 120px;
+    top: 8px;
+    left: -144px;
+    padding: 6px;
+    background-color: #232224;
+    border-radius: 8px;
+    text-align: center;
+    color: #FFF;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .btn-whatsapp:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  
+  @media screen and (max-width: 768px) {
+    .btn-whatsapp img {
+      max-width: 64px;
+    }
+  }
+
